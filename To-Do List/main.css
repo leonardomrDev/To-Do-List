@@ -5,12 +5,31 @@ body{
     width: 100%;
 }
 
+button.btn-task-remove{
+    background-color: #202096;
+    background-position: right;
+    border:white;
+    border-radius: 50%;
+    color: white;
+    padding: 16px;
+    justify-content: right;
+    text-align: right;
+    display: inline-block;
+    font-size: 8px;
+    margin: 2px 4px;
+    
+}
+
 ul.custom-ul{
     margin: auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    text-align: left;
+    text-align:center;
     padding: 10px;
+    width: 280px;
+    background: hotpink;
+    background-position: left;
+    border-radius: 20px;
+    border-style:double;
 }
 
 div.custom-div{
