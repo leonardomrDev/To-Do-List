@@ -7,9 +7,9 @@ class ToDoItem extends React.Component {
 
     render() {
         return (
-            <li>
+            <ul class="custom-ul">
                 {this.props.task}
-            </li>
+            </ul>
         );
     }
 }
@@ -40,16 +40,19 @@ class ToDoList extends React.Component {
 
     render() {
         return (
-            <div>
+        <body class="">
+            <div class="custom-div">
                 <h2>Add a new task to your to-do list</h2>
-                <input onChange = {this.handleChange} />
-                <button onClick = {this.handleSubmit}>Add</button>
+                <input type= "text" class= "custom-input" onChange = {this.handleChange} />
+                &nbsp;
+                <button class="custom-button" onClick = {this.handleSubmit}>Add</button>
                 <ul>
                     {this.state.to_do_list.map((task_text) =>
                         <ToDoItem task={task_text} />
                     )}
                 </ul>
             </div>
+        </body>
         );
     }
 }

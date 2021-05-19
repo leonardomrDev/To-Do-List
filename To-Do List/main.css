@@ -1,0 +1,60 @@
+body{
+    background-color: steelblue;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+ul.custom-ul{
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+div.custom-div{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 128px auto;
+    text-align: center;
+    padding: 10px;
+    background: #191d2e;
+    color: white;
+    width: 520px;
+    min-height: 600px;
+    border-radius: 10px;
+    padding-bottom: 32px;
+    text-transform: capitalize;
+}
+
+input.custom-input{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button.custom-button{
+    font-family: Hack, monospace;
+    background: #202096;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 1rem;
+    border: 0;
+    transition: all 0.5s;
+    border-radius: 10px;
+    width: auto;
+    position: relative;
+
+   /* background-color: #4CAF50; /* Green */
+   /* border: yes;
+    color: white;
+    padding: 10px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 18px; */
+}
