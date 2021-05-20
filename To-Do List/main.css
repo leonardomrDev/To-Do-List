@@ -28,7 +28,7 @@ ul.custom-ul{
     text-align:center;
     padding: 10px;
     width: 280px;
-    background: rgb(105, 220, 255);
+    background: rgba(0, 193, 252, 0.795);
     background-position: left;
     border-radius: 20px;
     border-style:double;
@@ -48,7 +48,6 @@ div.custom-div{
     min-height: 600px;
     border-radius: 10px;
     padding-bottom: 32px;
-    text-transform: capitalize;
 }
 
 input.custom-input{

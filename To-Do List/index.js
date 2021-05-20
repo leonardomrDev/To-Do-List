@@ -2,22 +2,25 @@ class ToDoItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {is_done: false};
-        this.handleCheck = this.handleCheck.bind(this); 
+        this.handleRemove = this.handleRemove.bind(this);  
 
     }
 
-    handleCheck(index, event){
-        this.setState(state => ({
-            completed: { ...state.completed, [index]: !state.completed[index] }
-          }));
+    handleRemove(index, event){
+        if (confirm("are you sure?")) {
+            let to_do_list = this.state.task_text
+            to_do_list.splice(index, 1);
+            this.setState({task: to_do_list});
         }
+    }
 
     render() {
         return (
             <ul class="custom-ul">
                 {this.props.task}                
-                <button class="btn-task-remove" onClick = {this.handleCheck}>✖</button>
+                <button class="btn-task-remove" onClick = {this.handleRemove}>✖</button>
             </ul>
+            
         );
     }
 }
@@ -30,6 +33,7 @@ class ToDoList extends React.Component {
             to_do_list: ['Finish this test', 'Get hired', 'Change the world', ]
             
     };
+
 		this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);       
         
@@ -63,7 +67,9 @@ class ToDoList extends React.Component {
                     )}
                 </ul>
             </div>
+
         </body>
+        
         );
     }
 }
