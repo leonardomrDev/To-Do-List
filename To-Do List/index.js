@@ -1,24 +1,24 @@
 class ToDoItem extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {is_done: false};
-        this.handleRemove = this.handleRemove.bind(this);  
+        this.state = {is_done: false};  
 
     }
 
-    handleRemove(index, event){
-        if (confirm("are you sure?")) {
-            let to_do_list = this.state.task_text
-            to_do_list.splice(index, 1);
-            this.setState({task: to_do_list});
-        }
-    }
+    removeItem=(props)=>{
+        const { to_do_list } = this.state;
+        to_do_list.splice(props, 1);
+        this.setState({
+            to_do_list,
+        });
+        console.log(this.state.to_do_list)
+    };
 
     render() {
         return (
             <ul class="custom-ul">
                 {this.props.task}                
-                <button class="btn-task-remove" onClick = {this.handleRemove}>✖</button>
+                <button class="btn-task-remove" onClick = {()=>this.removeItem(to_do_list)}>✖</button>
             </ul>
             
         );
