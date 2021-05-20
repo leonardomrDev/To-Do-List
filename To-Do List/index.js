@@ -11,7 +11,6 @@ class ToDoItem extends React.Component {
         this.setState({
             to_do_list,
         });
-        console.log(this.state.to_do_list)
     };
 
     render() {
