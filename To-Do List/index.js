@@ -2,14 +2,21 @@ class ToDoItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {is_done: false};
+        this.handleCheck = this.handleCheck.bind(this); 
 
     }
+
+    handleCheck(index, event){
+        this.setState(state => ({
+            completed: { ...state.completed, [index]: !state.completed[index] }
+          }));
+        }
 
     render() {
         return (
             <ul class="custom-ul">
                 {this.props.task}                
-                <button class="btn-task-remove">X</button>
+                <button class="btn-task-remove" onClick = {this.handleCheck}>✖</button>
             </ul>
         );
     }
@@ -24,15 +31,8 @@ class ToDoList extends React.Component {
             
     };
 		this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleCheck = this.handleCheck.bind(this);        
+        this.handleChange = this.handleChange.bind(this);       
         
-    }
-
-    handleCheck(index, event){
-        this.setState(state => ({
-            completed: { ...state.completed, [index]: !state.completed[index] }
-          }));
     }
 
     handleChange(event){
